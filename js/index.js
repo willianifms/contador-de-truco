@@ -1,5 +1,6 @@
 let pontosEquipe1 = 0;
 let pontosEquipe2 = 0;
+let vencedores = [];
 
 function aumentarPontos(equipe, quantidade) {
   if (equipe === 'equipe1') {
@@ -9,13 +10,20 @@ function aumentarPontos(equipe, quantidade) {
     pontosEquipe2 += quantidade;
     document.getElementById('pontosEquipe2').textContent = pontosEquipe2;
   }
-  
   if (pontosEquipe1 >= 12) {
-    localStorage.setItem('vencedor', document.getElementById('nomeEquipe1').value || 'Equipe 1');
-    window.location.href = 'vencedor.html';
+    let nomeEquipe1 = document.getElementById("nomeEquipe1").value
+    let resultado = document.getElementById("vencedor")
+    resultado.innerHTML = "Vencedor: " + nomeEquipe1
+    vencedores.push(nomeEquipe1);
+    atualizarVencedores();
+    reiniciarJogo();
   } else if (pontosEquipe2 >= 12) {
-    localStorage.setItem('vencedor', document.getElementById('nomeEquipe2').value || 'Equipe 2');
-    window.location.href = 'vencedor.html';
+    let nomeEquipe2 = document.getElementById("nomeEquipe2").value
+    let resultado = document.getElementById("vencedor")
+    resultado.innerHTML = "Vencedor: " + nomeEquipe2
+    vencedores.push(nomeEquipe2);
+    atualizarVencedores();
+    reiniciarJogo();
   }
 }
 
@@ -51,3 +59,8 @@ inputElement2.addEventListener('input', function() {
   var valorInput2 = inputElement2.value;
   valorMostradoElement2.textContent = valorInput2;
 });
+
+function atualizarVencedores() {
+  let vencedoresElement = document.getElementById('vencedores');
+  vencedoresElement.innerHTML = 'Vencedores: ' + vencedores.join(', ');
+}
