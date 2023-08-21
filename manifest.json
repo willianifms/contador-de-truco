@@ -16,7 +16,7 @@
             "src": "imagens/favicon.jpg",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "maskable"
         }
     ],
     "lang": "pt-BR",
