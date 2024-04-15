@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto:
 
-Este projeto é um aplicativo web progressivo (PWA) que permite aos usuários jogar o jogo de truco online. O aplicativo é responsivo e funciona offline, graças ao uso de um service worker. Além disso, é fácil de usar e tem uma interface intuitiva.
+Este projeto é um aplicativo web progressivo (PWA) que permite aos usuários contar os pontos de uma partida de truco. O aplicativo é responsivo e funciona offline, graças ao uso de um service worker. Além disso, é fácil de usar e tem uma interface intuitiva.
 
 ## Tecnologias Usadas:
 
